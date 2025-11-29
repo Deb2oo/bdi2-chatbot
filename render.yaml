@@ -3,8 +3,8 @@ services:
     name: bdi2-chatbot
     env: python
     plan: free
-    buildCommand: pip install -r requirements.txt && python -m spacy download en_core_web_sm
-    startCommand: gunicorn app:app
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.0
